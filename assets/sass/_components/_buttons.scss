@@ -1,0 +1,65 @@
+// Button one area start here ***
+.btn {
+	&-one {
+		display: inline-block;
+		font-weight: 500;
+		padding: 8px 24px;
+		border: 1px solid var(--primary-color);
+		border-radius: 30px;
+		span {
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			width: 16px;
+			height: 12px;
+			line-height: 16px;
+			margin-left: 8px;
+			color: var(--heading-color);
+			.arry1 {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				transition: 0.3s cubic-bezier(0.37, 0.08, 0.02, 0.93);
+			}
+			.arry2 {
+				position: absolute;
+				bottom: -15px;
+				left: -10px;
+				transition: 0.3s cubic-bezier(0.37, 0.08, 0.02, 0.93);
+			}
+		}
+		&:hover {
+			background-color: var(--primary-color);
+			color: var(--white);
+			span {
+				.arry1 {
+					top: -15px;
+					left: 15px;
+					color: var(--white);
+				}
+				.arry2 {
+					bottom: -3px;
+					left: 0;
+					color: var(--white);
+				}
+			}
+		}
+	}
+	&-two {
+		@extend.btn-one;
+		border: 1px solid var(--heading-color);
+		&:hover {
+			background-color: transparent;
+			color: var(--heading-color);
+			span {
+				.arry1 {
+					color: var(--heading-color);
+				}
+				.arry2 {
+					color: var(--heading-color);
+				}
+			}
+		}
+	}
+}
+// Button one area end here ***
